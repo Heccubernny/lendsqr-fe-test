@@ -1,0 +1,76 @@
+.skeleton{
+    background: #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+}
+
+.skeleton.lendsqr__main__content___body__table__data_row{
+    width: 100vw;
+    height: 50px;
+    display: grid;
+    place-items: center;
+
+    h1{
+    place-items: center;
+
+    }
+}
+
+// .skeleton.lendsqr__main__content___body__table__data{
+//     background: red;
+//     width: 40px;
+//     height:20px;
+//     display: table-cell;
+//     vertical-align: inherit;
+
+// }
+
+// .shimmer-wrapper{
+//     position: relative;
+//     overflow: hidden;
+//     background: #ddd;
+//     border-radius: 5px;
+//     height: 20px;
+//     width: 100%;
+// }
+
+
+.shimmer-wrapper{
+    // position:absolute;
+    // top:50%;
+    // left:50%;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 5rem;
+}
+
+.shimmer{
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to right, rgb(153, 151, 151), rgb(141, 139, 139), rgb(109, 104, 104));;
+    background-size: 200%;
+    transform: skewX(-20deg);
+    animation: shimmer 2s infinite;
+    display: grid;
+    place-items: center;
+    opacity: 0.3;
+
+}
+
+@keyframes shimmer {
+    0% {transform: translateX(0%);}
+
+    // 25% {transform: translateX(-100%);}
+
+    // 50% {transform: translateX(-60%);}
+
+    // 75% {transform: translateX(100%);}
+
+
+    100%{
+        transform: translateX(100%);
+    }
+
+}

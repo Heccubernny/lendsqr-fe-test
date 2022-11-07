@@ -1,0 +1,161 @@
+@use 'var';
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+
+
+
+.lendsqr__navbar{
+    box-shadow: var.$box-shadow;
+    background: red;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 50px;
+    align-items: center;
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    // right: 0;
+    // left: 0;
+    padding: 0 10rem;
+    z-index: 9999;
+    width: 100%;
+    height: 8rem;
+
+
+
+    form{
+        position: relative;
+    }
+
+    [type="search"]{
+        width:30%;
+        height: 50px;
+        font-size: 1.5rem;
+        padding-left: 15px;;
+        background: white;
+        position:absolute;
+        left: 18%;
+        // width:100%;
+    }
+
+
+}
+
+.lendsqr__main__content__header {
+    padding: 0 10rem;
+}
+
+.lendsqr__search_bar {
+    margin-top: 1rem;
+}
+
+.lendsqr__header{
+    // background: red;
+    // min-height: 1rem;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // align-items: center;
+
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+// .lendsqr__navbar{
+//     // min-height: 1rem;
+// }
+
+
+
+.lendsqr_header_notification_icon > img {
+    margin-right: 2rem;
+}
+
+.lendsqr__search_bar {
+    input{
+        box-sizing: border-box;
+        width: 100%;
+        background: #FFFFFF;
+        opacity: 0.4;
+        border: 1px solid #213F7D;
+        font-size:large;
+        color:#213F7D;
+    }
+    input[type="text"]{
+        width: 40rem;
+        height: 5rem;
+        border-color: #545F7D;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    &::placeholder{
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #545F7D;
+        opacity: 0.7;
+    }
+
+    &::after{
+        content: url('../../../assets/images/vector-3@2x.png');
+        background: #39CDCC;
+        padding: 1.6rem;
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    &:focus-visible{
+        outline: none;
+    }
+
+
+}
+
+
+
+.lendsqr__header__user{
+        display: flex;
+    align-items: center;
+}
+
+.lendsqr__header__docs{
+    margin-right: 3rem;
+
+}
+
+.lendsqr__header__user__avatar{
+    position: relative;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    margin-right:1rem;
+}
+
+.lendsqr__header__user__name{
+    position: relative;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #213F7D;
+}
+
+img.lendsqr_header_notification {
+    align-self: center;
+    margin-right: 1rem;
+}

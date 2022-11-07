@@ -1,0 +1,17 @@
+@use 'var';
+
+.lendsqr__main__content___body__profile_desc{
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: var.$box-shadow;
+    border-radius: 4px;
+    margin-bottom: 5rem;
+    background: #fff;
+    position: relative;
+    top: 0;
+    width: 70vw;
+}
+
+.lendsqr__main__content___body__table__profile_desc_content {
+    padding: 2rem;
+    left: 23rem;
+}

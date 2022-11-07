@@ -1,0 +1,22 @@
+@use 'var';
+
+@media only screen and (max-width: 600px){
+    .lendsqr_header{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    }
+    .lendsqr__search_bar input[type=text] {
+    width: 18rem;
+    }
+
+    .lendsqr__navbar{
+        position: fixed;
+    top: 0px;
+    height: 5rem;
+    width: 100%;
+    left: 0;
+
+    }
+
+}

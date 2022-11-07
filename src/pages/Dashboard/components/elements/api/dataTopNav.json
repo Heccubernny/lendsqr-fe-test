@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Dashboard",
+        "icon": "loan",
+        "link": "/dashboard"
+    },
+    {
+        "id": 2,
+        "name": "Loan",
+        "icon": "loan",
+        "link": "/loan"
+    }
+]

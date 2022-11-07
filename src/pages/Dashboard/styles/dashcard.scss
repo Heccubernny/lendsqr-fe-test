@@ -1,0 +1,111 @@
+@use 'var';
+
+%box-border-shared{
+    border: var.$border;
+    box-shadow: var.$box-shadow;
+    border-radius: 4px;
+    margin-bottom: 5rem;
+}
+
+
+@mixin text-font-details($lineHeight: 16px, $fontSize:14px, $fontWeight:500) {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-transform: uppercase;
+    color: var.$text-color;
+
+}
+
+
+.lendsqr__main__container {
+    width: 70vw;
+}
+
+.lendsqr__main__content__body_cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.lendsqr__main__content__body__card{
+box-sizing: content-box;
+width: 240px;
+height: 160px;
+background: #FFFFFF;
+flex: 0 1 24%;
+
+@extend %box-border-shared;
+
+}
+
+.lendsqr__main__content__body__card_details{
+    margin: 2rem 3rem;
+    div{
+        margin-bottom: 2rem;
+    }
+}
+
+
+.lendsqr__main__content__body__card__amount{
+
+ @include text-font-details($lineHeight:28px, $fontSize:24px, $fontWeight:600);
+
+}
+
+
+.lendsqr__main__content__body__card__img{
+display: inline-block;
+// background: #DF18FF;
+opacity: 0.1;
+padding:1rem;
+border-radius: 50%;
+background:#DF18FF;
+    img{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        // background: #DF18FF;
+    }
+}
+
+.lendsqr__main__content__body__card__title{
+    @include text-font-details;
+}
+
+
+
+// For short profile css
+.lendsqr__main__content__body__shortprofile{
+    width: 100vw;
+}
+
+
+.lendsqr__main__content__body__shortprofile__card{
+box-sizing: content-box;
+    width: 240px;
+    height: 160px;
+background: #FFFFFF;
+@extend %box-border-shared;
+
+
+}
+
+
+
+@media only screen and (max-width: 600px){
+    // .lendsqr__main__content__body_cards{
+    //     display:flex;
+    //     flex-wrap: wrap;
+    //     justify-content: space-between;
+    // }
+    .lendsqr__main__content__body__card{
+        flex: 0 1 100%;
+        box-sizing: content-box;
+        width: 240px;
+        height: 160px;
+        background: #FFFFFF;
+    }
+}

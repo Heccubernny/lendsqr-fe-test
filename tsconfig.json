@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "baseUrl": "./",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "paths": {
+    "@/*": ["src/modules/*"],
+    "@assets/*": ["src/assets/*"],
+    // "@authentication_comp/*": ["src/modules/authentication/components/*"],
+    // "@common_comp/*": ["src/modules/common/components/*"],
+    // "@dashboard_comp/*": ["../modules/dashboard/components/*"],
+    "@pages/*": ["src/pages/*"]
+    // "@dashboard_cont/*": ["./src/modules/dashboard/containers/*"]
+  },
+    "jsx": "react-jsx"
+  },
+  "types": ["vite/client", "@types/jest", "cypress", "@testing-library/cypress"],
+  "include": ["src", "**/*.ts", "postcss.config.cjs"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+
+}

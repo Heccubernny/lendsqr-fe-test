@@ -1,0 +1,47 @@
+@use 'var';
+
+
+
+.lendsqr__main{
+        /* height: 100%; */
+    position: relative;
+    top: 0;
+    // left: 23rem;
+    // margin-top: 2rem;//o
+    // width: 70vw;
+    margin-top: 0px;
+    right: 0;
+    left: 0;
+}
+
+
+
+
+.lendsqr__main__content__header__title{
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+margin: 10rem 0;
+color: var.$text-color;
+}
+
+.lendsqr__main__content__body__cards__card {
+    margin: 3rem 0 0 3rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    div{
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .lendsqr__main{
+    position: relative;
+    // width: calc(100% - 1em);
+    left: 0;
+    }
+}
