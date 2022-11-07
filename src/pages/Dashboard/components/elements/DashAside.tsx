@@ -1,208 +1,16 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
-import { logo } from '../../../../assets/images';
+import { dashboard_icon, loan, logo } from '../../../../assets/images';
 import '../../styles/dashaside.scss';
 import '../../styles/dashaside_responsiveness.scss';
 
-interface ElementProps
-{
-  label?: string;
-  required?: boolean;
-  minimizedLabel?: boolean;
-  description?: string;
-  error?: string;
-  wrapperStyle?: React.CSSProperties;
-  children?: JSX.Element | JSX.Element[];
-}
-
-type HeaderProps = {
-  children: React.ReactNode;
-};
-
-function Header(props: HeaderProps)
-{
-  return <div>{props.children}</div>;
-}
-
 function DashAside()
 {
-
-  const [ dataTopNav, setDataTopNav ] = useState([])
-  // useEffect(() =>
-  // {
-
-  useEffect(() =>
-  {
-
-    axios
-      .get("./api/dataTopNav.json")
-      .then((res) => setDataTopNav(res.data))
-      .catch((err) => console.log(err))
-
-  }, [])
-
-
-
-
-
-  const dataCustomers: any = [
-    {
-      id: 1,
-      name: "Dashboard",
-      icon: {},
-      link: "/dashboard"
-    },
-    {
-      id: 2,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 3,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 4,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 5,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 6,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 7,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 8,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 9,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 10,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-  ]
-
-
-  const dataBusiness: any = [
-    {
-      id: 1,
-      name: "Dashboard",
-      icon: "home",
-      link: "/dashboard"
-    },
-    {
-      id: 2,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 3,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 4,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-
-    {
-      id: 5,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 6,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 7,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 8,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 9,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 10,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-  ]
-
-  const dataSettings = [
-    {
-      id: 1,
-      name: "Dashboard",
-      icon: {},
-      link: "/dashboard"
-    },
-    {
-      id: 2,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-    {
-      id: 3,
-      icon: {},
-      name: "",
-      link: "/"
-    },
-
-  ]
-  // }, [])
-
-
-
-
-
-
+  const aside_menu_item = [
+    { id: 1, menu_logo: loan, menu_name: "Loan" },
+    { id: 2, menu_logo: dashboard_icon, menu_name: "dashboard_icon" },
+    { id: 3, menu_logo: logo, menu_name: "logo" },
+  ];
   return (
     <header className='lendsqr_aside_block'>
 
@@ -215,39 +23,52 @@ function DashAside()
           </div>
         </div>
 
-
+        {/* <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="close_icon" width="3em" height="3em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg> */}
         <div className="lendsqr__aside__menu lendsqr__aside__menu__items">
-          {dataTopNav.map((list: any, index: number) =>
-          {
-            <Link to={"dashboard/" + list.link} className="lendsqr__aside__menu__item">
-              <div className="lendsqr__aside__menu__item__icon" key={index}>
-                <img src={list.icon} alt="dashboard" />
-              </div>
-              <div className="lendsqr__aside__menu__item__title">
-                <span>{list.name}</span>
-              </div>
-            </Link>
-          })}
+          {/* {aside_menu_item.map((menu_item) =>
+                                {
+                                    <>
 
+                                        <div className="lendsqr__aside__menu__item__icon" key={menu_item.id}>
+                                            <img src={menu_item.menu_logo} alt="dashboard" />
+                                        </div>
+                                        <div className="lendsqr__aside__menu__item__title">
+                                            <span>{menu_item.menu_name}</span>
+                                        </div>
+                                    </>
+                                })} */}
 
+          <Link to="loan" className="lendsqr__aside__menu__item">
+            <div className="lendsqr__aside__menu__item__icon">
+              <img src={loan} alt="dashboard" />
+            </div>
+            <div className="lendsqr__aside__menu__item__title">
+              <span>Switch Organization</span>
+            </div>
+          </Link>
 
+          <Link to="loan" className="lendsqr__aside__menu__item">
+            <div className="lendsqr__aside__menu__item__icon">
+              <img src={loan} alt="dashboard" />
+            </div>
+            <div className="lendsqr__aside__menu__item__title">
+              <span>Loan</span>
+            </div>
+          </Link>
 
           <div className='lendsqr__aside__menu_customer'>
             <span className='lendsqr__aside__menu_customer__header'>Customers</span>
           </div>
 
           <div className='lendsqr__aside__menu_customer__item'>
-            {dataCustomers.map((list: any, index: number) =>
-            {
-              <Link to={"dashboard/" + list.link} className="lendsqr__aside__menu_customer__item__link " key={index}>
-                <div className="lendsqr__aside__menu_customer__item__icon">
-                  <img src={list.icon} alt="dashboard" />
-                </div>
-                <div className="lendsqr__aside__menu_customer__item__title">
-                  <span>{list.name}</span>
-                </div>
-              </Link>
-            })}
+            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
+              <div className="lendsqr__aside__menu_customer__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_customer__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
           </div>
 
           <div className='lendsqr__aside__menu_customer'>
@@ -255,18 +76,14 @@ function DashAside()
           </div>
 
           <div className='lendsqr__aside__menu_customer__item'>
-            {dataBusiness.map((list: any, index: number) =>
-            {
-              <Link to={"dashboard/" + list.link} className="lendsqr__aside__menu_customer__item__link" key={index}>
-                <div className="lendsqr__aside__menu_customer__item__icon">
-                  <img src={list.icon} alt="dashboard" />
-                </div>
-                <div className="lendsqr__aside__menu_customer__item__title">
-                  <span>{list.name}</span>
-                </div>
-              </Link>
-            })}
-
+            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
+              <div className="lendsqr__aside__menu_customer__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_customer__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
           </div>
 
 
@@ -275,18 +92,14 @@ function DashAside()
           </div>
 
           <div className='lendsqr__aside__menu_customer__item'>
-            {dataBusiness.map((list: any, index: number) =>
-            {
-              <Link to={"dashboard/" + list.link} className="lendsqr__aside__menu_customer__item__link" key={index}>
-                <div className="lendsqr__aside__menu_customer__item__icon">
-                  <img src={list.icon} alt="dashboard" />
-                </div>
-                <div className="lendsqr__aside__menu_customer__item__title">
-                  <span>{list.name}</span>
-                </div>
-              </Link>
-            })}
-
+            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
+              <div className="lendsqr__aside__menu_customer__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_customer__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
           </div>
 
 
@@ -296,7 +109,7 @@ function DashAside()
 
 
       </aside>
-    </header >
+    </header>
   );
 }
 
