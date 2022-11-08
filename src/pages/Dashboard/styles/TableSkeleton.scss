@@ -4,6 +4,14 @@
     border-radius: 5px;
     height: 20px;
     width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px){
+.skeleton{
+width: 50%;
+}
+
 }
 
 .skeleton.lendsqr__main__content___body__table__data_row{

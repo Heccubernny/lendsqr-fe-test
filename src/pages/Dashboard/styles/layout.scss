@@ -28,12 +28,12 @@
 
 .lendsqr__page__content {
     position: absolute;
-    left: 220px;
-    width: calc(100% - 220px);
+    right: 0;
+    width: 80%;
     min-height: 100vh;
-    // padding: 0 30px;
     float: right;
 }
+
 
 @media only screen and (max-width: 600px) {
     .lendsqr__page__content{

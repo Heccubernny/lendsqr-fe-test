@@ -39,8 +39,7 @@ function DashMain()
         setApiQuery(search);
         setSearch("");
     }
-    return (
-
+    return (  
         <section className="lendsqr__page__content">
             <DashNav handleSearch={handleSearch} handleSubmit={handleSubmit} search={search} />
             <main className="lendsqr__main">
@@ -51,6 +50,7 @@ function DashMain()
                     <DashCard />
                 </div>
                 <DashDetails />
+
                 {apiQuery}
 
 

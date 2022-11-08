@@ -22,10 +22,6 @@
 
 
 
-.lendsqr__main__content___body__table__data__option:after{
-    content: '\2807';
-    font-size: 10px;
-}
 
 // .modal__wrapper{
 //     box-sizing: border-box;
@@ -73,6 +69,14 @@
 .lendsqr__main__content___body__table__data__option{
     font-size: 1rem;
     text-align: left;
+ padding: 0.25em;
+}
+.lendsqr__main__content___body__table__head{
+	margin-right: 1rem;
+	span{
+margin-right: inherit;
+}
+
 }
 
 .lendsqr__main__content___body__table__head{
@@ -102,6 +106,15 @@
     padding: 3rem 2rem 3rem 3rem;
 }
 
+
+.lendsqr__main__content___body__table__data__option:after{
+    content: '\2807';
+    font-size: 10px;
+position: relative;
+    left: 1.5rem;
+}
+
+
 .lendsqr__main__content___body__table__data__option{
     padding: 0 3rem 0 0;
 }
@@ -113,16 +126,21 @@
 
 .lendsqr__main__content___body__table__data__status__inactive{
 
-    background: rgba(84, 95, 125, 0.061);
-    // opacity: 0.06;
-    border-radius: 50px;
-    padding: 0;
-    text-align:center;
-    margin-right: 10rem;
-    p{
-        color: #545F7D;
+   
+    
+        p{
+color: #545F7D;
         opacity: 1;
-    }
+	display: grid;
+    place-content: center;
+    background: rgba(84, 95, 125, 0.061);
+    border-radius: 50px;
+    height: 4rem;
+    padding: 2rem 3rem;
+    text-align: center;
+  
+}
+    
 }
 
 
@@ -137,10 +155,29 @@
 }
 
 .lendsqr__main__content___body__table__head,
-.lendsqr__main__content___body__table__data,
-.lendsqr__main__content___body__table__data__option{
+.lendsqr__main__content___body__table__data{
+flex: 1 1 150px;
+margin: 1rem;
+		 
 
 }
+
+.lendsqr__main__content___body__table__data__option:after {
+    content: "⠇";
+    font-size: 10px;
+    position: relative;
+    left: 0;
+}
+
+.lendsqr__main__content___body__table__head,
+.lendsqr__main__content___body__table__data,
+.lendsqr__main__content___body__table__data__option,
+{
+text-align: left; 
+  padding: 0.25em;
+box-sizing: border-box;
+}
+
 
 .lendsqr__main__content___body__table__head{
 
@@ -152,8 +189,62 @@
 .lendsqr__main__content___body__table__data__option{
 }
 
+.lendsqr__main__content___body__table__head_row,
 .lendsqr__main__content___body__table__data_row {
+display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+ 
+    align-items: center;
+    width: calc((100% - 0.5em) / (7));
 
 }
 
+.lendsqr__main__content___body__table__data_row {
+
+ border-bottom: 1px solid rgba(3,3,3,0.2);
+}
+
+
+}
+
+
+@media only screen and (max-width: 1360px){
+
+.lendsqr__main__content___body__table__head_row,
+.lendsqr__main__content___body__table__data_row {
+display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+    align-items: center;
+//width: calc((100% - 0.5em) / (7));
+width: calc((100% - 0.5em) / (1));
+}
+
+.lendsqr__main__content___body__table__head,
+.lendsqr__main__content___body__table__data{
+
+    flex: 1 1 150px;
+overflow-wrap: break-word;
+
+
+}
+
+
+
+.lendsqr__main__content___body__table__data__status__inactive{
+
+display: grid;
+ place-content: center;
+
+}
+
+.lendsqr__main__content___body__table__data__option:after {
+    content: "⠇";
+    font-size: 10px;
+    position: relative;
+    left: 0;
+}
 }

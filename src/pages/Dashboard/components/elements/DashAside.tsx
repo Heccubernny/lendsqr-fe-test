@@ -32,71 +32,131 @@ function DashAside()
                                         <div className="lendsqr__aside__menu__item__icon" key={menu_item.id}>
                                             <img src={menu_item.menu_logo} alt="dashboard" />
                                         </div>
-                                        <div className="lendsqr__aside__menu__item__title">
+                                        <div className="lendsqr__aside__menu_header__container__item__title">
                                             <span>{menu_item.menu_name}</span>
                                         </div>
                                     </>
                                 })} */}
 
-          <Link to="loan" className="lendsqr__aside__menu__item">
+
+<div className="lendsqr__aside__menu__item">
+          <Link to="loan" className="lendsqr__aside__menu__item__link">
             <div className="lendsqr__aside__menu__item__icon">
               <img src={loan} alt="dashboard" />
             </div>
-            <div className="lendsqr__aside__menu__item__title">
+            <div className="lendsqr__aside__menu_header__container__item__title">
               <span>Switch Organization</span>
             </div>
           </Link>
+</div>
 
-          <Link to="loan" className="lendsqr__aside__menu__item">
+<div className="lendsqr__aside__menu__item">
+          <Link to="loan" className="lendsqr__aside__menu__item__link">
             <div className="lendsqr__aside__menu__item__icon">
               <img src={loan} alt="dashboard" />
             </div>
-            <div className="lendsqr__aside__menu__item__title">
+            <div className="lendsqr__aside__menu_header__container__item__title">
               <span>Loan</span>
             </div>
           </Link>
+</div>
 
-          <div className='lendsqr__aside__menu_customer'>
-            <span className='lendsqr__aside__menu_customer__header'>Customers</span>
+          <div className='lendsqr__aside__menu_header__container'>
+            <span className='lendsqr__aside__menu__header'>Customers</span>
           </div>
 
-          <div className='lendsqr__aside__menu_customer__item'>
-            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
-              <div className="lendsqr__aside__menu_customer__item__icon">
+          <div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
                 <img src={loan} alt="dashboard" />
               </div>
-              <div className="lendsqr__aside__menu_customer__item__title">
+              <div className="lendsqr__aside__menu_header__container__item__title">
                 <span>Loan</span>
               </div>
             </Link>
           </div>
 
-          <div className='lendsqr__aside__menu_customer'>
-            <span className='lendsqr__aside__menu_customer__header'>Business</span>
-          </div>
-
-          <div className='lendsqr__aside__menu_customer__item'>
-            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
-              <div className="lendsqr__aside__menu_customer__item__icon">
+<div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
                 <img src={loan} alt="dashboard" />
               </div>
-              <div className="lendsqr__aside__menu_customer__item__title">
+              <div className="lendsqr__aside__menu_header__container__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
+          </div>
+
+<div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_header__container__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
+          </div>
+
+<div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_header__container__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
+          </div>
+
+<div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_header__container__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
+          </div>
+
+<div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_header__container__item__title">
+                <span>Loan</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className='lendsqr__aside__menu_header__container'>
+            <span className='lendsqr__aside__menu__header'>Business</span>
+          </div>
+
+          <div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
+                <img src={loan} alt="dashboard" />
+              </div>
+              <div className="lendsqr__aside__menu_header__container__item__title">
                 <span>Loan</span>
               </div>
             </Link>
           </div>
 
 
-          <div className='lendsqr__aside__menu_customer'>
-            <span className='lendsqr__aside__menu_customer__header'>Settings</span>
+          <div className='lendsqr__aside__menu_header__container'>
+            <span className='lendsqr__aside__menu__header'>Settings</span>
           </div>
 
-          <div className='lendsqr__aside__menu_customer__item'>
-            <Link to="loan" className="lendsqr__aside__menu_customer__item__link">
-              <div className="lendsqr__aside__menu_customer__item__icon">
+          <div className='lendsqr__aside__menu_header__container__item'>
+            <Link to="loan" className="lendsqr__aside__menu_header__container__item__link">
+              <div className="lendsqr__aside__menu_header__container__item__icon">
                 <img src={loan} alt="dashboard" />
               </div>
-              <div className="lendsqr__aside__menu_customer__item__title">
+              <div className="lendsqr__aside__menu_header__container__item__title">
                 <span>Loan</span>
               </div>
             </Link>

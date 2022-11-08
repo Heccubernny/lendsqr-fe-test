@@ -7,20 +7,17 @@
 
 .lendsqr__navbar{
     box-shadow: var.$box-shadow;
-    background: red;
+    box-shadow: -6px 20px 16px rgb(0 0 0 / 4%);
     display: grid;
-    grid-template-columns: 1fr auto;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
-    align-items: center;
-    margin-bottom: 30px;
     position: fixed;
     top: 0;
-    // right: 0;
-    // left: 0;
-    padding: 0 10rem;
     z-index: 9999;
     width: 100%;
     height: 8rem;
+    
 
 
 
@@ -29,25 +26,82 @@
     }
 
     [type="search"]{
-        width:30%;
+        width:75%;
         height: 50px;
         font-size: 1.5rem;
         padding-left: 15px;;
         background: white;
-        position:absolute;
-        left: 18%;
+        position:relative;
+        left: 14%;
+border-color: #3f33331c;
+border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
         // width:100%;
     }
 
 
 }
 
+.lendsqr__main__content___body__table__head_row__filter{
+	align-self: right;
+}
+
 .lendsqr__main__content__header {
     padding: 0 10rem;
 }
 
-.lendsqr__search_bar {
-    margin-top: 1rem;
+.lendsqr__search__button{
+    position: relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 0.2rem;
+    left: 12rem;
+    border-width: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #39CDCC;
+}
+
+@media only screen and (max-width: 600px){
+
+
+.lendsqr__navbar{
+	form{
+	display:flex;
+}
+	
+}
+.lendsqr__navbar [type=search] {
+	width: 100%;
+    height: 35.5px;
+    font-size: 1.5rem;
+    padding-left: 15px;
+    background: white;
+    position: relative;
+  
+    left: 8%;
+border-width: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.lendsqr__search__button {
+    position: relative;
+    width: 6.25rem;
+    height: 4.25rem;
+   
+    left: 1rem;
+    border-width: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #39CDCC;
+}
+
+
+}
+
+.lendsqr__search__button__icon{
+
 }
 
 .lendsqr__header{
@@ -149,7 +203,7 @@
 
 .lendsqr__header__user__name{
     position: relative;
-    margin-right: 1rem;
+    margin-right: 3rem;
     font-size: 1.5rem;
     font-weight: 500;
     color: #213F7D;
@@ -157,5 +211,5 @@
 
 img.lendsqr_header_notification {
     align-self: center;
-    margin-right: 1rem;
+    margin-right: 3rem;
 }

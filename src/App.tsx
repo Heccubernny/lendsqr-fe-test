@@ -6,7 +6,7 @@ function App()
 {
 
   return (
-    <>
+    <div className="app">
       {/* <Routes>
           <Route path="/" element={<Login />} /> */}
 
@@ -23,8 +23,8 @@ function App()
       Home Page
 
       <Link to="/login">Login Here</Link>
-      <Link to="/dashboard">Visit our Dashboard</Link>
-    </>
+      <Link to="/dashboard/users">Visit our Users Dashboard</Link>
+    </div>
   )
 }
 

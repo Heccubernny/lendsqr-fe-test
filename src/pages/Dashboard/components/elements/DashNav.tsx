@@ -1,5 +1,5 @@
 
-import { avatar, notification } from "../../../../assets/images";
+import { avatar, notification, search_icon } from "../../../../assets/images";
 import '../../styles/dashnav.scss';
 import '../../styles/dashnav_responsiveness.scss';
 
@@ -18,8 +18,8 @@ const DashNav = ({ handleSearch, handleSubmit, search }: any) =>
             {/* <div className="lendsqr__search_bar"> */}
             <form>
                 <input type="search" placeholder="Search for anything" onChange={handleSearch} value={search} />
-                <button type="submit" onClick={handleSubmit}>
-                    <img src={search} alt="search" />
+                <button type="submit" onClick={handleSubmit} className="lendsqr__search__button">
+                    <img src={search_icon} alt="search" className="lendsqr__search__button__icon" />
                 </button>
             </form>
             {/* </div> */}

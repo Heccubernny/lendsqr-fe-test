@@ -5,3 +5,8 @@
     gap: 1.8rem;
     grid-template-columns: 1fr auto;
 }
+
+.app{
+    display: flex;
+    justify-content: space-around;
+}

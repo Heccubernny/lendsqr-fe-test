@@ -3,6 +3,7 @@ import { UsersProps } from '../../../../features/interface/';
 import '../../styles/dashdetails.scss';
 import Pagination from './Pagination';
 import TableSkeleton from './TableSkeleton';
+import {filter_icon} from '../../../../assets/images';
 
 
 const DashDetails = () =>
@@ -86,20 +87,20 @@ const DashDetails = () =>
         <>
             <section className="lendsqr__main__content___body__tables">
                 <table className="lendsqr__main__content___body__table">
-                    {/* <div> */}
-                    <thead className="lendsqr__main__content___body__table__cols">
+                  
 
                         <tr className="lendsqr__main__content___body__table__head_row">
-                            <th className="lendsqr__main__content___body__table__head">Organization</th>
+                            <th className="lendsqr__main__content___body__table__head"><span>Organization</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span>
+</th>
+                            <th className="lendsqr__main__content___body__table__head"><span>Username</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span></th>
+<th className="lendsqr__main__content___body__table__head"><span>Email</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span></th>
 
-                            <th className="lendsqr__main__content___body__table__head">Username</th>
-                            <th className="lendsqr__main__content___body__table__head">Email</th>
-                            <th className="lendsqr__main__content___body__table__head">Phone Number</th>
-                            <th className="lendsqr__main__content___body__table__head">Date Joined</th>
-                            <th className="lendsqr__main__content___body__table__head">Status</th>
-                            <th className="lendsqr__main__content___body__table__head"></th>
-                        </tr>
-                    </thead>
+<th className="lendsqr__main__content___body__table__head"><span>Phone Number</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span></th>
+
+                            <th className="lendsqr__main__content___body__table__head"><span>Date Joined</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span></th>
+                            <th className="lendsqr__main__content___body__table__head"><span>Status</span> <span className="lendsqr__main__content___body__table__head_row__filter"><img src={filter_icon}/></span>
+</th>
+</tr>
                     {/* </div> */}
                     {/* <DashTableBody /> */}
                     {/* <div> */}
@@ -134,12 +135,12 @@ const DashDetails = () =>
 
                                             {createAt}
                                         </td>
-                                        <td className="lendsqr__main__content___body__table__data lendsqr__main__content___body__table__data__status__inactive"><p>
-                                            Inactive</p></td>
+                                        <td className="lendsqr__main__content___body__table__data lendsqr__main__content___body__table__data__status__inactive">
+                                            <p>Inactive</p></td>
                                         <td className="lendsqr__main__content___body__table__data__option"
                                             key={index} onClick={showModal}>
                                             {/* <OptionModal users={users} show={show}/> */}
-                                            showModal
+                                          
 
                                         </td>
                                     </tr>
