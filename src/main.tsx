@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import './index.scss';
 
-import ErrorPage from './error-page';
 
-import { Dashboard, Login, UserDetail } from './pages';
 
 
 // [ ANLP_Bold, ANLP_Regular, ANLP_Italic ].forEach(font =>
@@ -20,39 +18,40 @@ import { Dashboard, Login, UserDetail } from './pages';
 
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     errorElement: <ErrorPage />,
+//   },
 
-  {
-    path: "login",
-    element: <Login />,
-  },
+//   {
+//     path: "login",
+//     element: <Login />,
+//   },
 
-  {
-    path: "dashboard/users/",
-    element: <Dashboard />,
-  },
+//   {
+//     path: "dashboard/users/",
+//     element: <Dashboard />,
+//   },
 
-  {
-    path: "dashboard/users/?page=:page",
-    element: <Dashboard />,
-  },
+//   {
+//     path: "dashboard/users/?page=:page",
+//     element: <Dashboard />,
+//   },
 
-  {
-    path: "dashboard/users/:id",
-    element: <UserDetail />,
-  }
-]);
+//   {
+//     path: "dashboard/users/:id",
+//     element: <UserDetail />,
+//   }
+// ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    {/* <BrowserRouter> */}
-    <RouterProvider router={router} />
-    {/* </BrowserRouter> */}
+    <BrowserRouter>
+      {/* <RouterProvider router={router} /> */}
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 
 )

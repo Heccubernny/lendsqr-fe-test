@@ -1,30 +1,29 @@
 import './App.scss';
 
-import { Link } from 'react-router-dom';
-
+import { Link, Route, Routes } from 'react-router-dom';
+import { Dashboard, Login, UserDetail } from './pages/';
 function App()
 {
 
   return (
     <div className="app">
-      {/* <Routes>
-          <Route path="/" element={<Login />} /> */}
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/users" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
 
-      {/* <Route path='/dashboard'>
-            <Route path="/" element={<div>Dashboard</div>} />
 
-            <Route path='/users'>
-              <Route path='/show_filter' element={<div>My guy shwow filter</div>} />
-              <Route path='/details' element={<div> Details bobo </div>} />
-            </Route>
 
-          </Route> */}
-      {/* </Routes> */}
+        <Route path='/users/details/:id' element={<UserDetail />} />
+
+
+      </Routes>
+
       Home Page
 
-      <Link to="/login">Login Here</Link>
+      < Link to="/login" > Login Here</Link >
       <Link to="/dashboard/users">Visit our Users Dashboard</Link>
-    </div>
+    </div >
   )
 }
 
