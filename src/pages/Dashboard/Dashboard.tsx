@@ -1,5 +1,5 @@
-import { DashMain } from "./components/elements";
-import Layout from "./components/Layout";
+import { DashMain } from "../../components/Dashboard";
+import Layout from './Layout';
 
 import { useEffect } from 'react';
 
@@ -14,9 +14,7 @@ const Dashboard = () =>
     return (
         <div>
             <Layout />
-
             <DashMain />
-
         </div >
     );
 }

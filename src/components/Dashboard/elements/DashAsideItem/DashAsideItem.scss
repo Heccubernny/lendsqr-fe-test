@@ -1,0 +1,57 @@
+@use '../../../../styles/Dashboard/var';
+// Extends
+
+%menu--items-shared{
+
+display: grid;
+    place-content: flex-start;
+    place-items: self-start;
+
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+%menu--items--title-shared{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color:#213F7D;
+    opacity: 0.5;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.lendsqr__aside__menu__item{
+    @extend %menu--items-shared;
+}
+
+.lendsqr__aside__menu__item__link{
+    display:flex;
+
+}
+
+.lendsqr__aside__menu__item__title{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: var.$text2-color;
+    margin-left: 1rem;
+}
+
+
+.lendsqr__aside__menu__item__title{
+    span{
+        @extend %menu--items--title-shared;
+    }
+    &:hover{
+        color: var.$text-color;
+    }
+}

@@ -1,4 +1,4 @@
-import Login from '@pages/Authentication/Login';
+import Login from '@pages/Auth/Login';
 import { shallow } from 'enzyme';
 describe("Login", () =>
 {

@@ -1,5 +1,5 @@
-import { DashNav, DashUserDetail } from "./components/elements";
-import Layout from "./components/Layout";
+import { DashNav, DashUserDetail } from "../../components/Dashboard";
+import Layout from './Layout';
 
 import { useEffect } from 'react';
 function UserDetail()
@@ -16,7 +16,6 @@ function UserDetail()
         <DashNav avatar_name="Adedeji 1" />
         <DashUserDetail />
       </section>
-
     </div >
   );
 }
