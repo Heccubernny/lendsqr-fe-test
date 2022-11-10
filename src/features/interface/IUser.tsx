@@ -32,6 +32,7 @@ export interface UsersProps
     id: string;
     length: number;
     slice: any;
+    status: string;
 }
 
 export interface profileProps

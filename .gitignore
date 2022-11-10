@@ -26,3 +26,4 @@ src/stories/*
 *.sw?
 *.todos
 .src/features/hooks/*
+savedFile

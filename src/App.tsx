@@ -11,12 +11,12 @@ function App()
 
 
       <div><Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard/users" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Login />} />
-        <Route path='/dashboard/users/:id' element={<UserDetail />} />
-        <Route path='/blacklist/:id' element={<StatusComponent status="blacklisted" message="Blacklisted successfully" />} />
+        <Route path="/dashboard/" element={<Dashboard />} />
+        <Route path="/dashboard/users/" element={<Dashboard />} />
+        <Route path="/login/" element={<Login />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path='/dashboard/users/:id/' element={<UserDetail />} />
+        <Route path='/dashboard/users/:id/blacklist' element={<StatusComponent status="blacklisted" message="Blacklisted successfully" />} />
       </Routes></div>
 
     </div>

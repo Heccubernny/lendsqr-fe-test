@@ -1,11 +1,18 @@
-import { DashAside } from "../../components/Dashboard";
+import { DashAside, DashNav } from "../../components/Dashboard";
 import '../../styles/Dashboard/layout.scss';
 
-const Layout = () =>
+interface Props
+{
+    children: React.ReactNode,
+}
+const Layout = ({ children }: Props) =>
+// const Layout = () =>
 {
     return (
         <>
             <DashAside />
+
+            <main>{children}</main>
         </>
     );
 }

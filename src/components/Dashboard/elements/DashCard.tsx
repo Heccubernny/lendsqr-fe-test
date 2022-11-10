@@ -13,6 +13,7 @@ function DashCard()
                         icon={route.icon}
                         title={route.title}
                         amount={route.amount}
+                        color={route.color}
                     />
                 ))}
             </div>

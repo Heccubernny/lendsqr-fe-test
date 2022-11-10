@@ -33,23 +33,6 @@
 
 
 
-
-// For short profile css
-.lendsqr__main__content__body__shortprofile{
-    width: 100vw;
-}
-
-
-.lendsqr__main__content__body__shortprofile__card{
-box-sizing: content-box;
-    width: 240px;
-    height: 160px;
-background: #FFFFFF;
-@extend %box-border-shared;
-
-
-}
-
 @media only screen and (max-width: 600px){
     .lendsqr__main__content__body_cards{
         display:flex;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { UsersProps } from '../../../features/interface';
+import { setLocalUsers } from '../../../features/utils/localStorage';
+
 import '../../../styles/Dashboard/dashdetails.scss';
 import DataTableRow from './DashDetailsItem/DataTableRow';
 import HeadTableRow from './DashDetailsItem/HeadTableRow';
@@ -17,6 +19,7 @@ const DashDetails = () =>
     const [ pageNumberLimit, setPageNumberLimit ] = useState(5);
     const [ maxPageNumberLimit, setMaxPageNumberLimit ] = useState(10);
     const [ minPageNumberLimit, setMinPageNumberLimit ] = useState(0);
+    const status = [ "pending", "active", "inactive", "blacklisted" ];
 
     const url = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
 
@@ -25,7 +28,10 @@ const DashDetails = () =>
     {
         setShow(true);
         const response = await fetch(url);
-        const data = await response.json();
+        const data = await response.json()
+
+        data?.map((user: UsersProps) => user.status = status[ Math.floor(Math.random() * status.length) ]);
+        setLocalUsers(data);
         setUsers(data);
         setShow(false);
     };
@@ -77,6 +83,8 @@ const DashDetails = () =>
         setCurrentPage(Number(e.target.id));
 
     }
+
+
 
     return (
         <>

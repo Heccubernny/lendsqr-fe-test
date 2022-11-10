@@ -10,13 +10,11 @@ function UserDetail()
   });
 
   return (
-    <div>
-      <Layout />
-      <section className="lendsqr__page__content">
-        <DashNav avatar_name="Adedeji 1" />
-        <DashUserDetail />
-      </section>
-    </div >
+
+    <section className="lendsqr__page__content">
+      <DashNav avatar_name="Adedeji 1" />
+      <Layout children={<DashUserDetail />} />
+    </section>
   );
 }
 

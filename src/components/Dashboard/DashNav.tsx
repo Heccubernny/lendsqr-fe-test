@@ -1,11 +1,13 @@
+import { HiMenuAlt1 } from 'react-icons/hi';
+import { avatar, logo, notification, search_icon } from "../../assets/images";
 import '../../styles/Dashboard/dashnav.scss';
 import '../../styles/Dashboard/dashnav_responsiveness.scss';
-import { avatar, notification, search_icon } from "../../assets/images";
 const DashNav = ({ handleSearch, handleSubmit, search }: any) =>
 {
     return (
         <nav className="lendsqr__navbar">
             {/* <div className="lendsqr__search_bar"> */}
+
             <form>
                 <input type="search" placeholder="Search for anything" onChange={handleSearch} value={search} />
                 <button type="submit" onClick={handleSubmit} className="lendsqr__search__button">

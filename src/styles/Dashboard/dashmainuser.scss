@@ -1,17 +1,25 @@
 @use 'var';
 
-
-
-.lendsqr__main{
-        /* height: 100%; */
+.lendsqr__main__user{
     position: relative;
     top: 0;
-    // left: 23rem;
-    // margin-top: 2rem;//o
-    // width: 70vw;
+    margin-top: 0px;
+    right: 0;
+    left: 59rem;
+    width: 100%;
+
+}
+
+@media only screen and (max-width: 720px) {
+    .lendsqr__main__user{
+    position: relative;
+    top: 0;
     margin-top: 0px;
     right: 0;
     left: 0;
+    width: 100%;
+
+}
 }
 
 

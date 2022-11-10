@@ -41,7 +41,12 @@ const Login = () =>
 
                         </div>
                         <Link to='/'>
-                            <button className="login__button">Log in</button>
+                            <button onClick={
+                                () =>
+                                {
+                                    window.location.href = '/users'
+                                }
+                            } className="login__button">Log in</button>
                         </Link>
                     </div>
                 </div>

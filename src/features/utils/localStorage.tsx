@@ -1,4 +1,4 @@
-import { UsersProps } from '../interface/IUser';
+import { UsersProps } from '../interface';
 export const getUser = () =>
 {
     const users = localStorage.getItem("users");
@@ -16,7 +16,7 @@ export const getUserById = (id: number) =>
     return user;
 };
 
-export const setUsers = (users: UsersProps[]) =>
+export const setLocalUsers = (users: UsersProps[]) =>
 {
     localStorage.setItem("users", JSON.stringify(users));
 };
@@ -25,7 +25,7 @@ export const removeUser = (id: string) =>
 {
     const users = getUser();
     const newUsers = users.filter((user: UsersProps) => user.id !== id);
-    setUsers(newUsers);
+    setLocalUsers(newUsers);
 };
 
 export const removeUsers = () =>

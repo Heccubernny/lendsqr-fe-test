@@ -1,28 +1,58 @@
-import '../../../styles/Dashboard/dashcard.scss';
+import { UsersProps } from '../../../features/interface/IUser';
+import '../../../styles/Dashboard/dashuserdetails.scss';
 
-// import '../../styles/dashnav_responsiveness.scss';
-import { user2 } from "../../../assets/images";
-function DashShortProfile()
+
+interface Props
+{
+  user: UsersProps | undefined;
+}
+function DashShortProfile({ user }: Props)
 {
   return (
-    <section>
-      <div className="lendsqr__main__content__body__shortprofile">
-        <div className="lendsqr__main__content__body__shortprofile__card">
-          <div className="lendsqr__main__content__body__shortprofile__card_details">
-            <div className="lendsqr__main__content__body__shortprofile__card__img">
-              <img src={user2} alt="loan" />
-            </div>
-            <div className="lendsqr__main__content__body__shortprofile__card__title">
-              <span>Loan Balance</span>
-            </div>
-            <div className="lendsqr__main__content__body__shortprofile__card__amount">
-              <span>2,453</span>
-            </div>
+    <div className="lendsqr__main__content__body__shortprofile__card">
+      <div className="lendsqr__main__content__body__shortprofile__card_details_top">
+        <div className="lendsqr__main__content__body__shortprofile__card_details_left">
+          <div className="user_image">
+            {user?.profile.avatar ? (
+              < img src={user?.profile.avatar} style={{ width: "10rem", height: "10rem", borderRadius: "50%" }} alt="avatar" />
+            ) : (<img src={""} alt="profile" />)}
+          </div>
+
+          <div className="user_name__account_number">
+            <h3>{`${user?.profile.firstName} ${user?.profile.lastName}`}</h3>
+            <p>{user?.accountNumber}</p>
           </div>
         </div>
+        <div className="vertical_line" />
 
+        <div className="lendsqr__main__content__body__shortprofile__card_details_middle">
+          <h4>User's Tier</h4>
+          {/* TODO::get the star icon svg and import it here */}
+          <img src={""} alt="ratings" />
+
+        </div>
+        <div className="vertical_line" />
+
+        <div className="lendsqr__main__content__body__shortprofile__card_details_right">
+          <h3>{user?.profile.currency}
+            {user?.accountBalance.toLocaleString("en-US", {
+              style: "currency", currency: "NGN"
+            })}</h3>
+          <p>{user?.accountNumber}</p>
+        </div>
       </div>
-    </section>
+
+
+      <div className="lendsqr__main__content__body__shortprofile__card_details_nav">
+        <p className="user_nav_active">General Details</p>
+        <p>Documents</p>
+        <p>Bank Details</p>
+        <p>Loans</p>
+        <p>Savings</p>
+        <p>App and System</p>
+      </div>
+    </div>
+
   );
 }
 

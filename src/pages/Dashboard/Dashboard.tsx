@@ -13,8 +13,8 @@ const Dashboard = () =>
 
     return (
         <div>
-            <Layout />
-            <DashMain />
+            <Layout children={<DashMain />} />
+
         </div >
     );
 }

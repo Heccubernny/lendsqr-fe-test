@@ -1,24 +1,62 @@
 @use 'var';
 
 
-.modal__wrapper{
-    box-sizing: border-box;
-
-    width: 13rem;
-    height: 13rem;
-    // display:none;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(84, 95, 125, 0.04);
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+.modal__wrapper {
+    background-color: #f9f9f9;
+    background: #fff;
+    border: 1px solid rgba(84,95,125,.04);
     border-radius: 4px;
-    &.active{
-        position:absolute;
-        display: flex;
-        flex-direction: column;
+    box-shadow: 3px 5px 20px rgb(0 0 0 / 4%);
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    height: 130px;
+    padding: 20px 21px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 180px;
+    z-index: 9999;
+
+
+
+
+
+  .modal__item {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    align-items: center;
+
+    img {
+      margin-right: 10px;
     }
+
+    span {
+      color: #545f7d;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    cursor: pointer;
+  }
+
+  .item:hover {
+    text-decoration: underline;
+  }
 }
 
+ .active {
+    position: absolute;
+    display: contents;
+    flex-direction: column;
+  }
 
 @media only screen and (max-width: 600px){
     .lendsqr__main__content___body__tables{
@@ -75,7 +113,8 @@
 
     color: #545F7D;
 
-    padding: 3rem 0 3rem 3rem;
+    padding: 3rem 5.5rem 3rem 2rem;
+    display: -webkit-inline-box;
 }
 
 .lendsqr__main__content___body__table__data {
@@ -110,9 +149,7 @@
 
 }
 
-.lendsqr__main__content___body__table__data__status__inactive {
-
-
+.lendsqr__main__content___body__table__data__status {
     p {
         color: #545F7D;
         opacity: 1;
@@ -121,10 +158,43 @@
         background: rgba(84, 95, 125, 0.061);
         border-radius: 50px;
         height: 4rem;
-        padding: 2rem 3rem;
+        // padding: 2rem 3rem;
         text-align: center;
+        height: 30px;
+        border: none;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
 
-    }
+        &.pending {
+            background-color: rgba(#e9b200, 0.1);
+            color: #e9b200;
+            width: 90px;
+        }
+
+            &.blacklisted {
+            color: #e4033b;
+            background-color: rgba(#e4033b, 0.1);
+            width: 100px;
+        }
+
+        &.active {
+            color: #39cd62;
+            background-color: rgba(#39cd62, 0.06);
+            width: 90px;
+            position: relative;
+        }
+
+        &.inactive {
+            color: #545f7d;
+            background-color: rgba(#545f7d, 0.06);
+            width: 80px;
+        }
+
+        }
 
 }
 
