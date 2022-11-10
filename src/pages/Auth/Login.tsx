@@ -13,7 +13,7 @@ const Login = () =>
     return (
         <div className='login__container'>
             <div className="lendsqr_login__logo">
-                <img src={logo} alt="lendsqr_logo" />
+                <Link to="/dashboard/users"><img src={logo} alt="lendsqr_logo" /></Link>
             </div>
             <div className='login__content'>
                 <div className='row'>
