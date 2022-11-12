@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { back_arrow } from '../../../assets/images';
 import { UsersProps } from '../../../features/interface';
 import { getUserById } from '../../../features/utils/localStorage';
 import '../../../styles/Dashboard/dashmainuser.scss';
@@ -29,10 +30,15 @@ function DashUserDetail()
       <div className="lendsqr__main__content__header">
         <div className="lendsqr__main__content__header__return__link">
           <Link to={`/dashboard/users`}>
-            <i className="fas fa-arrow-left"></i>
+            <img src={back_arrow} alt="back_arrow" />
             <span>Back to Users</span>
           </Link>
 
+
+        </div>
+        <div className="lendsqr__main__content__header__title">
+
+          <span>Users Details</span>
           <div className="lendsqr__main__content__header__action__button">
             <button className="lendsqr__main__content__header__action__button__item blacklist__button">
 
@@ -44,11 +50,6 @@ function DashUserDetail()
             </button>
 
           </div>
-        </div>
-        <div className="lendsqr__main__content__header__title">
-
-          <span>Users Details</span>
-
         </div>
         <DashShortProfile user={user} />
       </div>

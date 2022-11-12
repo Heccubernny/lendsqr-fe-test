@@ -1,3 +1,4 @@
+import { star_fill, star_outline } from '../../../assets/images';
 import { UsersProps } from '../../../features/interface/IUser';
 import '../../../styles/Dashboard/dashuserdetails.scss';
 
@@ -28,13 +29,16 @@ function DashShortProfile({ user }: Props)
         <div className="lendsqr__main__content__body__shortprofile__card_details_middle">
           <h4>User's Tier</h4>
           {/* TODO::get the star icon svg and import it here */}
-          <img src={""} alt="ratings" />
+          <img src={star_fill} alt="ratings" />
+          <img src={star_outline} alt="ratings" />
+          <img src={star_outline} alt="ratings" />
+
 
         </div>
         <div className="vertical_line" />
 
         <div className="lendsqr__main__content__body__shortprofile__card_details_right">
-          <h3>{user?.profile.currency}
+          <h3>₦
             {user?.accountBalance.toLocaleString("en-US", {
               style: "currency", currency: "NGN"
             })}</h3>

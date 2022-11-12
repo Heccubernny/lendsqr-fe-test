@@ -15,10 +15,10 @@
     position: fixed;
     top: 0;
     z-index: 9999;
-    width: 100%;
+    width: 80%;
     height: 8rem;
 background: #fff;
-    
+
 
 
 
@@ -27,8 +27,8 @@ background: #fff;
     }
 
     [type="search"]{
-        width:75%;
-        height: 50px;
+        width:50%;
+        height: 40px;
         font-size: 1.5rem;
         padding-left: 15px;;
         background: white;
@@ -54,9 +54,9 @@ border-top-left-radius: 8px;
 .lendsqr__search__button{
     position: relative;
     width: 6.25rem;
-    height: 6.25rem;
+    height: 5.05rem;
     top: 0.2rem;
-    left: 12rem;
+    left: 10.5rem;
     border-width: 0;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -70,7 +70,7 @@ border-top-left-radius: 8px;
 	form{
 	display:flex;
 }
-	
+
 }
 .lendsqr__navbar [type=search] {
 	width: 100%;
@@ -79,7 +79,7 @@ border-top-left-radius: 8px;
     padding-left: 15px;
     background: white;
     position: relative;
-  
+
     left: 8%;
 border-width: 0;
     border-top-left-radius: 8px;
@@ -90,7 +90,7 @@ border-width: 0;
     position: relative;
     width: 6.25rem;
     height: 4.25rem;
-   
+
     left: 1rem;
     border-width: 0;
     border-top-right-radius: 8px;
@@ -185,8 +185,10 @@ border-width: 0;
 
 
 .lendsqr__header__user{
-        display: flex;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
+    margin-right: 8rem;
 }
 
 .lendsqr__header__docs{

@@ -53,8 +53,8 @@ const DashDetails = () =>
         const right = Number(document.getElementById(id)?.offsetWidth) - 200;
 
         const modal = document.querySelector(".modal__wrapper")
-        modal?.classList.add(".active");
-        // modal?.classList.toggle("active")
+        // modal?.classList.add(".active");
+        modal?.classList.toggle(".active")
 
         modal?.setAttribute("style", `top: ${top}px; left: ${right}px;`)
         setUserId(id);

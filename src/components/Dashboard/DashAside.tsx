@@ -26,6 +26,7 @@ function DashAside()
           <div className='lendsqr__aside__menu_header__container'>
             <span className='lendsqr__aside__menu__header'>Customers</span>
           </div>
+
           {customerRoutes.map((item) => (
             <DashAsideItem path={item.path} name={item.name} icon={item.icon} />
           ))}

@@ -25,7 +25,7 @@ export const dashboardRoutes = [
 
 export const customerRoutes = [
     {
-        path: "/users",
+        path: "/dashboard/users",
         name: "Users",
         icon: friends,
     },

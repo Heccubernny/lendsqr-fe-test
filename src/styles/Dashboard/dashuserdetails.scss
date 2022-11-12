@@ -9,11 +9,10 @@
     border-radius: 4px;
     background: #fff;
 
-    width: 90%;
-    display: flex;
+    width: 85%;
     flex-direction: column;
     align-items: flex-start;
-    padding: 3rem 1rem 3rem 5rem;
+    padding: 3rem;
     margin: 40px auto;
 }
 //cbw
@@ -28,6 +27,7 @@
       font-size: 16px;
       line-height: 19px;
       color: #213f7d;
+      margin: 3rem 0;
     }
 }
 
@@ -38,6 +38,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
+
 }
 
 
@@ -46,7 +47,7 @@
 
 hr{
     opacity: 0.2;
-    width: 93%;
+    width: 100%;
 }
 
 //c-i
@@ -60,8 +61,8 @@ hr{
     margin-bottom: 20px;
 
     text-align: left;
-    &span{
-         font-weight: 400;
+    span{
+      font-weight: 400;
       font-size: 12px;
       line-height: 14px;
       text-transform: uppercase;
@@ -69,7 +70,7 @@ hr{
       color: #545f7d;
     }
 
-    &p{
+    p{
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: normal;
@@ -96,7 +97,12 @@ hr{
 }
 
 
-
+.lendsqr__main__content___body__profile_desc_content{
+      display: flex;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
 // For short profile css
 // .lendsqr__main__content__body__shortprofile{
 //     width: 100vw;
@@ -117,7 +123,7 @@ hr{
 .lendsqr__main__content__body__shortprofile__card {
   position: relative;
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   height: 210px;
 
   background: #ffffff;
@@ -196,8 +202,8 @@ hr{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
-    margin: 1rem 1.7rem;
+    line-height: 20px;
+    margin: 1rem 3rem;
 
 
   }
